@@ -1,0 +1,8 @@
+services:
+  redis:
+    container_name: 'myredis'
+    image: 'redis'
+    restart: always
+    ports:
+      - 6379:6379
+    command: redis-server --requirepass mypassword
