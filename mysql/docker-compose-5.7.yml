@@ -1,7 +1,7 @@
 version: "3.6"
 services:
   database:
-    image: mysql:8.0
+    image: mysql:5.7
     container_name: database-container
     restart: always
     ports: # 映射端口
@@ -9,9 +9,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: "123456" # 初始化root用户密码
       MYSQL_DATABASE: "bus_real_time" # 初始化数据库
-      MYSQL_HOST: "%"
       TZ: "Asia/Shanghai" # 设置时区
     volumes:
-      - "~/docker-data/mysql/8.0/db:/var/lib/mysql"
-      - "~/docker-data/mysql/8.0/logs:/var/log/mysql:rw"      
-      - "~/docker-data/mysql/8.0/initdb.d:/docker-entrypoint-initdb.d:ro"
+      - "~/docker-data/mysql/5.7/db:/var/lib/mysql"
+      - "~/docker-data/mysql/5.7/logs:/var/log/mysql:rw"      
+      - "~/docker-data/mysql/5.7/initdb.d:/docker-entrypoint-initdb.d:ro"
