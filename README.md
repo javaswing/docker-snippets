@@ -25,3 +25,12 @@
     # 启动并后台运行
     docker-compose up -d;
     ```
+### Docker中国加速源
+```json
+{
+ "registry-mirrors" : [
+    "https://hub-mirror.c.163.com",
+    "https://mirror.baidubce.com"
+ ]
+}
+```
